@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* body {
+
+    margin: 0;
+    padding: 0;
+    background: var(--test-color);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url(bgshape.png); */
+    background-image: var(--image-change);
+    background-color: var(--newtest-color);
+    background-size: cover;
+    background-position: 40% 20%;
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="schstyles.css">
+    <link rel="icon" href="Klogo.PNG">
+    <!-- <link rel="stylesheet" href="home_styles.css"> -->
+    <script src="script.js" defer ></script>
+    
+    <title>SCHEDULE</title>
+    <style>
+        /* table {
+            text-align: center;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            height: 50vh;
+            font-size: 1.2rem;
+            width: 90%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        } */
+        
+        @keyframes moveup{
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+      }
+
+.holder {
+  opacity: 0;
+        transform: translateY(30px);
+        animation: moveup 0.5s linear forwards;
+}
+td:nth-child(3) {
+    animation: moveup 20s linear forwards;
+}        
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+            <div class="brand-title">KNUST PREP WEB</div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Preperation.html">PREPARATION</a></li>
+                    <li><a href="Schedule.html">SCHEDULE</a></li>
+                    <li><a href="About.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="holder">
+            <h1 class="temperror_2" id="t2">Oops!! You forgot to pick your course, please proceed<br> to the <a href="index.html">homepage</a> and select your course</h1>
+            <!-- <div class="alarmholder"> -->
+                <table id="cs4Table">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>endDate</th>
+                            <th>Countdown</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td>CSM 484 Introduction to Compilers</td>
+                                <td>Tuesday 2022/09/13 3:30 pm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CSM 478 Computer Networks</td>
+                                <td>Wednesday, 2022/09/14 3:30 pm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CSM 482 Information Systems II</td>
+                                <td>Thursday, 2022/09/15 3:30 pm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CSM 494 Computer Security</td>
+                                <td>Thursday, 2022/09/22 8:30 am</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>MCS 472 Fundamentals of Entrepreneurship</td>
+                                <td>Friday, 2022/09/23 8:30 am</td>
+                                <td></td>
+                            </tr>
+                    </tbody>
+                </table>
+                <table id="cs3Table">
+                    <thead>
+                        <tr>
+                            <th >Course</th>
+                            <th >endDate</th>
+                            <th >Countdown</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td >CSM 354 Computer Graphics</td>
+                                <td>Friday, 2022/09/09 3:30 pm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td >CSM 374 Real-time and Embedded systems</td>
+                                <td >Tuesday, 2022/09/13 3:30 pm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td >CSM 394 Operations Research II</td>
+                                <td >Wedsday, 2022/09/14 8:30 am</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CSM 352 Computer Architecture</td>
+                                <td>Thursday, 2022/09/15 8:30 am</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CSM 358 E-Commerce	</td>
+                                <td>Monday, 2022/09/19 3:30 pm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CSM 286 Accounting II</td>
+                                <td>Tueday, 2022/09/20 12:00 pm</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CSM 376 Research Method and IT Project</td>
+                                <td>Thursday, 2022/09/22 8:30 am</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td >CSM 388 Data Structure II</td>
+                                <td>Friday, 2022/09/23 12:00 pm</td>
+                                <td></td>
+                            </tr>
+                    </tbody>
+                </table>
+            <!-- </div> -->
+        </div>
+
+        <img src="moon.png" title="darkmode" class="dark-toggle" id="icon">
+
+</body>
+<script>
+
+// let stuff = localStorage.getItem('TableView');
+    // var checkLinks = document.getElementsByClassName('links curve')[0];
+    // checkLinks.addEventListener('click', () => {
+    // document.getElementById("cs3Table").style.display="block";
+
+    // })
+    let tempV = JSON.parse(localStorage.getItem("TableView"));
+if(tempV === "v1"){
+    document.getElementById("cs4Table").style.display="block";
+    document.getElementById("t2").style.display = "none";
+    // document.getElementById("cs3Table").style.display="block";
+}else if (tempV === "v2"){
+    document.getElementById("cs3Table").style.display="block";
+    document.getElementById("t2").style.display = "none";
+};
+
+
+
+    // var table = document.getElementById("bidsTable");
+    var table = document.getElementById("cs4Table");
+    var table2 = document.getElementById("cs3Table");
+
+    var x = setInterval(
+    function () {
+
+        for (var i = 1, row; row = table.rows[i]; i++) {
+            //iterate through rows
+            //rows would be accessed using the "row" variable assigned in the for loop
+
+            var endDate = row.cells[1];
+            countDownDate = new Date(endDate.innerHTML.replace(/-/g, "/")).getTime();
+            var countDown = row.cells[2];
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+            // Display the result in the element
+            countDown.innerHTML = (days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ");
+                
+            //   table2.innerHTML = (days + "d " + hours + "h "
+            //       + minutes + "m " + seconds + "s ");
+                
+
+                // Array.prototype.forEach.call(document.getElementsByClassName(".bb"), function (el ) { el.innerHTML = (days + "d " + hours + "h "
+                // + minutes + "m " + seconds + "s "); });
+
+            //If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                countDown.innerHTML = "Paper has started";
+            }
+        }
+    }, 1000);
+
+    var x = setInterval(
+    function () {
+
+        for (var i = 1, row; row = table2.rows[i]; i++) {
+            //iterate through rows
+            //rows would be accessed using the "row" variable assigned in the for loop
+
+            var endDate = row.cells[1];
+            countDownDate = new Date(endDate.innerHTML.replace(/-/g, "/")).getTime();
+            var countDown = row.cells[2];
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+            // Display the result in the element
+            countDown.innerHTML = (days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ");
+                
+            //   table2.innerHTML = (days + "d " + hours + "h "
+            //       + minutes + "m " + seconds + "s ");
+                
+
+                // Array.prototype.forEach.call(document.getElementsByClassName(".bb"), function (el ) { el.innerHTML = (days + "d " + hours + "h "
+                // + minutes + "m " + seconds + "s "); });
+
+            //If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                countDown.innerHTML = "Paper has started";
+            }
+        }
+    }, 1000);
+    
+
+</script>
+
+</html
+

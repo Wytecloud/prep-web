@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home_styles.css">
+    <script src="script.js" defer ></script>
+    <link rel="icon" href="Klogo.PNG">
+    <!-- <script src="test.js" defer ></script> -->
+    <!-- <script src="jquery.js"></script>
+
+    <script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  
+    </script> -->
+    
+    <!-- <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="d3.min.js?v=3.2.8"></script>
+    
+                <script type="text/javascript"charset="utf-8">
+                    d3.text("test.csv", function(data) {
+                        var parsedCSV = d3.csv.parseRows(data);
+                
+                        var container = d3.select(".test")
+                            .append("table")
+                
+                            .selectAll("tr")
+                                .data(parsedCSV).enter()
+                                .append("tr")
+                
+                            .selectAll("td")
+                                .data(function(d) { return d; }).enter()
+                                .append("td")
+                                .text(function(d) { return d; });
+                    });
+                </script> -->
+
+    <title>KNUST PREP WEB</title>
+    <style>
+        @keyframes moveup{
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+      }
+
+.model {
+  opacity: 0;
+        transform: translateY(30px);
+        animation: moveup 0.4s linear forwards;
+}
+
+.model:last-child {
+  animation-delay: 0.25s;
+}
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #content, #content * {
+                visibility: visible;
+            }
+            .content{
+                display: none;
+            }
+            nav {
+                display: none;
+            }
+            table {
+                height: fit-content;
+                overflow: hidden;
+                color: black;
+            }
+            .content-2 {
+                position: absolute;
+            }
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+            <div class="brand-title">KNUST PREP WEB</div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Preperation.html">PREPARATION</a></li>
+                    <li><a href="Schedule.html">SCHEDULE</a></li>
+                    <li><a href="About.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content" id="hometoppage">
+            <div class="model welcome">
+                <h1>Welcome</h>
+                <h2>
+                    to 
+                    <span>KNUST PREB WEB</span>
+                    ,
+                </h2>
+                <p>where we offer all the preparations for your
+                    exams in one place, step right up and start your new
+                    preparation experience.</p>
+
+                <div class="selection">
+                    <button class="click">Select your course</button>
+                    <div class="list">
+                        <a href="#move">
+                            <button class="links" onclick="loadCS3()">CS3</button>
+                        </a>
+                        <a href="#move">
+                            <button class="links curve" onclick="loadCS4()">CS4</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="model calendar">
+                <div class="cal-body">
+                    <span class="month-name">Month</span>
+                    <span class="day-name">Day</span>
+                    <span class="date-number">00</span>
+                    <span class="year">0000</span>
+                </div>
+            </div>
+            
+        </div>
+        <img src="moon.png" title="darkmode" class="dark-toggle" id="icon" onclick="darkmode()">
+        <div class="content-2" id="move">
+
+            <div class="tables">
+
+<!-- CS4 timetable -->
+<div class="printzone" id="content">
+                <div class="timetable a" id="cs4">
+                    <table>
+                    <thead>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Course</th>
+                        <th>Venue</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Date">Tuesday 24th May 2022</td>
+                            <td data-label="Time">12.00pm-2.00pm</td>
+                            <td data-label="Course">CSM 481 Information Systems I</td>
+                            <td data-label="Venue">SF1/SF19/SF20</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Thursday 26th May 2022</td>
+                            <td data-label="Time">3.30pm-5.30pm</td>
+                            <td data-label="Course">CSM 481 Operating System</td>
+                            <td data-label="Venue">FF1/FF5/FF24</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Monday 30th May 2022</td>
+                            <td data-label="Time">3.30pm-5.30pm</td>
+                            <td data-label="Course">CSM 491 Graph Theory & its Application	</td>
+                            <td data-label="Venue">FF1/FF5/FF24</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Tuesday 31st May 2022</td>
+                            <td data-label="Time">3.30pm-5.30pm</td>
+                            <td data-label="Course">CSM 477 Data Communications</td>
+                            <td data-label="Venue">SF1/SF7/SF8</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Wednesday 1st June 2022</td>
+                            <td data-label="Time">3.30pm-5.30pm</td>
+                            <td data-label="Course">CSM 495 Introduction to Software Engineering</td>
+                            <td data-label="Venue">SF1/SF7/SF8</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Thursday 2nd June 2022</td>
+                            <td data-label="Time">12.00pm-2.00pm</td>
+                            <td data-label="Course">CSM 497 Expert Systems</td>
+                            <td data-label="Venue">SF1/SF7/SF8</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Friday 3rd June 2022</td>
+                            <td data-label="Time">8.30am -10.30am</td>
+                            <td data-label="Course">MAS 261 Principles of Management I</td>
+                            <td data-label="Venue">FF1/FF5/FF24</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                </div>
+
+<!-- CS3 timetable -->
+
+                <div class="timetable b" id="cs3">
+                    <table>
+                        <thead>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Course</th>
+                            <th>Venue</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Date">Friday 20th May 2022</td>
+                                <td data-label="Time">3.30pm-5.30pm</td>
+                                <td data-label="Course">CSM 393 Operations Research I</td>
+                                <td data-label="Venue">FF1/FF5/FF24</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">Monday 23rd May 2022</td>
+                                <td data-label="Time">3.30pm-5.30pm</td>
+                                <td data-label="Course">CSM 353 Survey of Programming Languages</td>
+                                <td data-label="Venue">SF1/SF7/SF8</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">Thursday 26th May 2022</td>
+                                <td data-label="Time">3.30pm-5.30pm</td>
+                                <td data-label="Course">CSM 357 Human Computer Interaction</td>
+                                <td data-label="Venue">SF1/SF7/SF8</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">Friday 27th May 2022</td>
+                                <td data-label="Time">3.30pm-5.30pm</td>
+                                <td data-label="Course">CSM 387 Data Structures I</td>
+                                <td data-label="Venue">FF1/FF5/FF24</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">Tuesday 31st May 2022</td>
+                                <td data-label="Time">12.00pm-2.00pm</td>
+                                <td data-label="Course">CSM 285 Accounting I</td>
+                                <td data-label="Venue">TF1/TF34/SF7</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">Wednesday 1st June 2022</td>
+                                <td data-label="Time">8.30am -10.30am</td>
+                                <td data-label="Course">CSM 395 Introduction To Artificial Intelligence</td>
+                                <td data-label="Venue">FF1/FF5/FF24/FF6</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">Thursday 2nd June 2022</td>
+                                <td data-label="Time">3.30pm-5.30pm</td>
+                                <td data-label="Course">CSM 399 Web-Based Concepts & Development</td>
+                                <td data-label="Venue">SF1/SF7/SF20</td>
+                            </tr>
+    
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+                <div class="print">
+                    <h1 class="temperror" id="t1">Oops!! You forgot to pick your course,<br> please <a href="#hometoppage">scroll up</a> and select your course</h1>
+                    <button class="printout" onclick="tablePrint()">
+                        Click to download
+                    </button>
+                </div>
+
+            </div>
+
+            
+
+            <div id="div1" class="test">
+
+            </div>
+
+        </div>
+</body>
+
+</html
+
