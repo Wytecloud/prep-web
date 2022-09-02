@@ -136,7 +136,7 @@ color: blue;
 
 /* media querry for hamburger menu */
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
     .toggle-button {
         display: flex;
     }
