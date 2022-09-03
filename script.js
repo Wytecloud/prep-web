@@ -170,5 +170,4 @@ function loadCS3() {
 
 function tablePrint() {
     print();
-    document.getElementById("content").focus();
 }
