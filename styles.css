@@ -176,6 +176,30 @@ color: blue;
     }
 }
 
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #content, #content * {
+        visibility: visible;
+    }
+    .content{
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+    table {
+        height: fit-content;
+        overflow: hidden;
+        color: black;
+    }
+    .content-2 {
+        position: absolute;
+    }
+    
+}
+
 /* darkmode toggle styles */
 
 .dark-toggle{
