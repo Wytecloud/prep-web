@@ -104,7 +104,8 @@
 
 .welcome {
   margin-bottom: 0;
-  background-color: rgba(1, 1, 1, 0.1);
+  background-color: rgba(255, 253, 253, 0.1);
+  /* background-color: rgba(1, 1, 1, 0.1); */
   backdrop-filter: blur(20px);
   color: white;
   width: 500px;
