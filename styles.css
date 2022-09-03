@@ -136,7 +136,7 @@ color: blue;
 
 /* media querry for hamburger menu */
 
-@media screen and (max-width: 650px) {
+@media (max-width: 650px) {
     .toggle-button {
         display: flex;
     }
@@ -174,30 +174,6 @@ color: blue;
     .navbar-links.active {
         display: flex;
     }
-}
-
-@media print {
-    body * {
-        visibility: hidden;
-    }
-    #content, #content * {
-        visibility: visible;
-    }
-    .content{
-        display: none;
-    }
-    nav {
-        display: none;
-    }
-    table {
-        height: fit-content;
-        overflow: hidden;
-        color: black;
-    }
-    .content-2 {
-        position: absolute;
-    }
-    
 }
 
 /* darkmode toggle styles */
