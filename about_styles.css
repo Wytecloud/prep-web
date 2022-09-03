@@ -244,10 +244,6 @@
   height: 200px;
 }
 
-.holder-1 {
-  /* display: none; */
-}
-
 .webvideo {
   width:500px;
   /* background-color: #e91e63; */
@@ -321,12 +317,13 @@ height: 500px;
     visibility: visible;
   }
 
-  video {
-    width: 90%;
+   .webvideo {
+    width: fit-content;
   }
 
-  .webvideo {
-    padding-left: 50px;
+  video {
+    width: 100%;
   }
+
 }
 
