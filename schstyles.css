@@ -7,16 +7,6 @@
     align-items: center;
 }
 
-/* .alarmholder {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background-color: blue;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;    
-} */
-
 body {
     background-position: 150px -99%;
 }
@@ -43,29 +33,19 @@ table {
     font-size: 1.6em;
     outline: 0;
     font-weight: bold;
-    /* width: fit-content; */
-    /* padding: 40px; */
   }
 
   th,tr,td {
     padding: 10px 15px;
     border: none;
     backdrop-filter: blur(.2px);
-    /* border-bottom: 1px solid #dddddd; */
   }
   
   th {
-    /* background-color: #ba68c5; */
     background-color: #01579b;
     color: #fafafa;
     text-transform: uppercase;
   }
-  
-  /* tr:last-child {
-    border-bottom: 20px solid #ba68c5;
-    border-bottom: 20px solid #01579b;
-    margin-bottom: 0px;
-  } */
   
   tbody {
     border-bottom: 20px solid #01579b;

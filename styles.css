@@ -139,14 +139,21 @@ color: blue;
 @media (max-width: 650px) {
     .toggle-button {
         display: flex;
+        margin-top: 4px;
     }
 
     .navbar-links {
         display: none;
         width: 100%;
     }
+    
+    .navbar .brand-title{
+        margin-top: 16px;
+        margin-left: 12px;
+    }
 
     .navbar {
+        height: 8vh;
         font-size: 1.1rem;
         flex-direction: column;
         align-items: flex-start;

@@ -104,7 +104,7 @@
 
 .welcome {
   margin-bottom: 0;
-  background-color: rgba(255, 253, 253, 0.1);
+  background-color: rgba(255, 253, 253, 0.2);
   /* background-color: rgba(1, 1, 1, 0.1); */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter:blur(20px);
@@ -277,9 +277,10 @@ tbody {
   align-items: center;
   flex-direction: column;
   /* background-color: rgba(0, 0, 0, 0.4); */
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter:blur(15px);
+  background-color: rgba(255, 253, 253, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  color: white;
   
   /* backdrop-filter: blur(15px); */
   width: 250px;

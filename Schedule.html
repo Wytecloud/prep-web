@@ -10,17 +10,6 @@
     
     <title>SCHEDULE</title>
     <style>
-        /* table {
-            text-align: center;
-            background-color: antiquewhite;
-            border-radius: 10px;
-            height: 50vh;
-            font-size: 1.2rem;
-            width: 90%;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-        } */
         
         @keyframes moveup{
         100%{
@@ -162,12 +151,6 @@ td:nth-child(3) {
 </body>
 <script>
 
-// let stuff = localStorage.getItem('TableView');
-    // var checkLinks = document.getElementsByClassName('links curve')[0];
-    // checkLinks.addEventListener('click', () => {
-    // document.getElementById("cs3Table").style.display="block";
-
-    // })
     let tempV = JSON.parse(localStorage.getItem("TableView"));
 if(tempV === "v1"){
     document.getElementById("cs4Table").style.display="block";
@@ -178,9 +161,6 @@ if(tempV === "v1"){
     document.getElementById("t2").style.display = "none";
 };
 
-
-
-    // var table = document.getElementById("bidsTable");
     var table = document.getElementById("cs4Table");
     var table2 = document.getElementById("cs3Table");
 
@@ -212,12 +192,6 @@ if(tempV === "v1"){
             countDown.innerHTML = (days + "d " + hours + "h "
                 + minutes + "m " + seconds + "s ");
                 
-            //   table2.innerHTML = (days + "d " + hours + "h "
-            //       + minutes + "m " + seconds + "s ");
-                
-
-                // Array.prototype.forEach.call(document.getElementsByClassName(".bb"), function (el ) { el.innerHTML = (days + "d " + hours + "h "
-                // + minutes + "m " + seconds + "s "); });
 
             //If the count down is finished, write some text 
             if (distance < 0) {
@@ -255,10 +229,6 @@ if(tempV === "v1"){
             countDown.innerHTML = (days + "d " + hours + "h "
                 + minutes + "m " + seconds + "s ");
                 
-            //   table2.innerHTML = (days + "d " + hours + "h "
-            //       + minutes + "m " + seconds + "s ");
-                
-
                 // Array.prototype.forEach.call(document.getElementsByClassName(".bb"), function (el ) { el.innerHTML = (days + "d " + hours + "h "
                 // + minutes + "m " + seconds + "s "); });
 
