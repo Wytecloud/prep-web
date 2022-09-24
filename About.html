@@ -139,6 +139,16 @@
           <img src="moon.png" title="darkmode" class="dark-toggle" id="icon">
 
 </body>
-
+<script>
+  let tempV = JSON.parse(localStorage.getItem("TableView"));
+  if(tempV === "v1"){
+      document.getElementById("prep-section").href="prep-cs4.html";
+      // document.getElementById("cs3Table").style.display="block";
+  }else if (tempV === "v2"){
+      document.getElementById("prep-section").href="prep-cs3.html";
+  }else {
+      document.getElementById("prep-section").href="Preperation.html";
+  };
+  </script>
 </html
 

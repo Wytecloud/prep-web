@@ -44,32 +44,29 @@ function darkness() {
     JSON.stringify(theme));
 }icon.onclick = darkness;
 
-setInterval(() => {
-    let GetTheme =
-    JSON.parse(localStorage.getItem("PageTheme"));
-    console.log(GetTheme);
-    if(GetTheme === "DARK"){
-        document.body.classList = "dark-theme";
-        icon.src = "sun.png";
-    }else{
-        document.body.classList = "";
-        icon.src = "moon.png";
-    }
-    },);
+// setInterval(() => {
+//     let GetTheme =
+//     JSON.parse(localStorage.getItem("PageTheme"));
+//     console.log(GetTheme);
+//     if(GetTheme === "DARK"){
+//         document.body.classList = "dark-theme";
+//         icon.src = "sun.png";
+//     }else{
+//         document.body.classList = "";
+//         icon.src = "moon.png";
+//     }
+//     },);
 
-    // function testdark() {
-    //     let GetTheme =
-    //     JSON.parse(localStorage.getItem("PageTheme"));
-    //     console.log(GetTheme);
-    //     if(GetTheme === "DARK"){
-    //         document.body.classList = "dark-theme";
-    //         icon.src = "sun.png";
-    //     }else{
-    //         document.body.classList = "";
-    //         icon.src = "moon.png";
-    //     }
-    //     }
-    //     icon.onclick = testdark;
+        let GetTheme =
+        JSON.parse(localStorage.getItem("PageTheme"));
+        console.log(GetTheme);
+        if(GetTheme === "DARK"){
+            document.body.classList = "dark-theme";
+            icon.src = "sun.png";
+        }else{
+            document.body.classList = "";
+            icon.src = "moon.png";
+        }
 
 // var icon =document.getElementById("icon");
 
