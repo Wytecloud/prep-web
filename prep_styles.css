@@ -52,7 +52,9 @@ body::-webkit-scrollbar {
 width: 100%;
 display: flex;
 border-radius: 8px;
-background-color: rgba(1, 1, 1, 0.552);
+/* background-color: rgba(1, 1, 1, 0.552); */
+background-color: rgba(255, 255, 255, 0.13);
+
 margin: 10px;
 gap: 10px;
 padding: 10px;
@@ -68,6 +70,8 @@ font-size: 1.2rem;
 font-weight: 520;
 display: flex;
 background-color: #c7c7c7f4;
+background-color: #fffffff4;
+
 border-radius: 50%;
 height: 100px;
 width: 100px;
@@ -89,7 +93,9 @@ box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
 }
 
 .folder-3{
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
+    background-color: rgba(255, 255, 255, 0.13);
+    width: fit-content;
     margin: 10px;
     width: 25%;
     display: flex;

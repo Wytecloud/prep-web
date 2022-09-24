@@ -178,18 +178,6 @@
                             <td data-label="Course">CSM 495 Introduction to Software Engineering</td>
                             <td data-label="Venue">SF1/SF7/SF8</td>
                         </tr>
-                        <tr>
-                            <td data-label="Date">Thursday 2nd June 2022</td>
-                            <td data-label="Time">12.00pm-2.00pm</td>
-                            <td data-label="Course">CSM 497 Expert Systems</td>
-                            <td data-label="Venue">SF1/SF7/SF8</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Date">Friday 3rd June 2022</td>
-                            <td data-label="Time">8.30am -10.30am</td>
-                            <td data-label="Course">MAS 261 Principles of Management I</td>
-                            <td data-label="Venue">FF1/FF5/FF24</td>
-                        </tr>
 
                     </tbody>
                 </table>
@@ -272,6 +260,28 @@
 
         </div>
 </body>
+
+<script>
+
+let tempC = JSON.parse(localStorage.getItem("TableView"));
+if(tempC === "v1"){
+    document.getElementById("prep-section").href="prep-cs4.html";
+    document.getElementById("cs3").style.display = "none";
+    document.getElementById("cs4").style.display = "block";
+    document.getElementById("t1").style.display = "none";
+        
+    // document.getElementById("cs3Table").style.display="block";
+}else if (tempC === "v2"){
+    document.getElementById("prep-section").href="prep-cs3.html";
+    document.getElementById("cs3").style.display = "block";
+    document.getElementById("cs4").style.display = "none";
+    document.getElementById("t1").style.display = "none";
+    
+}else {
+    document.getElementById("prep-section").href="Preperation.html";
+};
+
+</script>
 
 </html
 

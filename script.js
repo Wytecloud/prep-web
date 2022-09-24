@@ -178,12 +178,26 @@ function tablePrint() {
     print();
 }
 
+// let tempC = JSON.parse(localStorage.getItem("TableView"));
+// if(tempC === "v1"){
+//     document.getElementById("prep-section").href="prep-cs4.html";
+//     // document.getElementById("cs3Table").style.display="block";
+// }else if (tempC === "v2"){
+//     document.getElementById("prep-section").href="prep-cs3.html";
+// }else {
+//     document.getElementById("prep-section").href="Preperation.html";
+// };
+
 // let tempV = JSON.parse(localStorage.getItem("TableView"));
 // if(tempV === "v1"){
+//     document.getElementById("cs4Table").style.display="block";
+//     document.getElementById("t2").style.display = "none";
 //     document.getElementById("prep-section").href="prep-cs4.html";
 //     // document.getElementById("cs3Table").style.display="block";
 // }else if (tempV === "v2"){
+//     document.getElementById("cs3Table").style.display="block";
+//     document.getElementById("t2").style.display = "none";
 //     document.getElementById("prep-section").href="prep-cs3.html";
-// }else {
+// }else if (tempV === "") {
 //     document.getElementById("prep-section").href="Preperation.html";
 // };
