@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="schstyles.css">
     <link rel="icon" href="Klogo.PNG">
     <!-- <link rel="stylesheet" href="home_styles.css"> -->
-    <script src="script.js" defer ></script>
+    <script src="script.js" defer></script>
     
     <title>SCHEDULE</title>
     <style>
@@ -47,7 +47,7 @@ td:nth-child(3) {
             <div class="navbar-links">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="Preperation.html">PREPARATION</a></li>
+                    <li><a href="#" id="prep-section" >PREPARATION</a></li>
                     <li><a href="Schedule.html">SCHEDULE</a></li>
                     <li><a href="About.html">ABOUT</a></li>
                 </ul>
@@ -152,15 +152,22 @@ td:nth-child(3) {
 </body>
 <script>
 
+
     let tempV = JSON.parse(localStorage.getItem("TableView"));
 if(tempV === "v1"){
     document.getElementById("cs4Table").style.display="block";
     document.getElementById("t2").style.display = "none";
+    document.getElementById("prep-section").href="prep-cs4.html";
     // document.getElementById("cs3Table").style.display="block";
 }else if (tempV === "v2"){
     document.getElementById("cs3Table").style.display="block";
     document.getElementById("t2").style.display = "none";
+    document.getElementById("prep-section").href="prep-cs3.html";
+}else {
+    document.getElementById("prep-section").href="Preperation.html";
 };
+
+
 
     var table = document.getElementById("cs4Table");
     var table2 = document.getElementById("cs3Table");

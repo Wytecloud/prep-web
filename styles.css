@@ -43,7 +43,9 @@ body::-webkit-scrollbar {
     
     /* about page background */
     /* --about-color:#b6b4b4; */
-    --about-color:#90b1be;
+
+    /* --about-color:#90b1be; */
+    --about-color: linear-gradient(#6CD0FF, #1C2E4C);
     
 }
 

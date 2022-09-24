@@ -4,8 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="prep_styles.css">
-    <script src="script.js" defer ></script>
     <link rel="icon" href="Klogo.PNG">
+    <script src="script.js" defer ></script>
+
  
     <title>PREPERATION</title>
     <style>
@@ -30,9 +31,8 @@
             </div>
         </nav>
         <div class="prep-holder">
-            <h1 class="temperror_2" id="t2">Oops!! You forgot to pick your course, please proceed<br> to the <a href="index.html">homepage</a> and select your course</h1>
 
-            <!-- <div class="prep-3">
+            <div class="prep-3">
 
                 <div class="menu-3">
                     <a href="#a1">
@@ -88,7 +88,7 @@
 
                 </div> 
                              
-            </div> -->
+            </div>
 
         </div>
         <img src="moon.png" title="darkmode" class="dark-toggle" id="icon" onclick="darkmode()">
@@ -98,9 +98,17 @@
         </footer>
        
 </body>
-<script>
 
-</script>
+<script>
+    let tempV = JSON.parse(localStorage.getItem("TableView"));
+if(tempV === "v1"){
+    document.getElementById("prep-selection").href="prep-cs4.html";
+    // document.getElementById("cs3Table").style.display="block";
+}else if (tempV === "v2"){
+    document.getElementById("prep-selection").href="prep-cs3.html";
+
+};
+    </script>
 
 </html
 

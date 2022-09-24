@@ -23,47 +23,38 @@
             <div class="navbar-links">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="#" id="prep-section" >PREPARATION</a></li>
+                    <li><a href="#" id="prep-selection">PREPARATION</a></li>
                     <li><a href="Schedule.html">SCHEDULE</a></li>
                     <li><a href="About.html">ABOUT</a></li>
                 </ul>
             </div>
         </nav>
         <div class="prep-holder">
-            <h1 class="temperror_2" id="t2">Oops!! You forgot to pick your course, please proceed<br> to the <a href="index.html">homepage</a> and select your course</h1>
 
-            <!-- <div class="prep-3">
+            <div class="prep-3">
 
                 <div class="menu-3">
                     <a href="#a1">
                         <div class="menu-button">
-                            CSM 380
+                            CSM 480
                         </div>
                     </a>
                     
                     <div class="menu-button">
-                        CSM 370
+                        CSM 470
                     </div>
                     <a href="#a3">
                         <div class="menu-button">
-                            CSM 340
+                            CSM 440
                         </div>
                     </a>
                     <div class="menu-button">
-                        CSM 320
+                        CSM 420
                     </div>
                     <div class="menu-button">
-                        CSM 310
+                        CSM 410
                     </div>
-                    <div class="menu-button">
-                        CSM 390
-                    </div>
-                    <div class="menu-button">
-                        CSM 360
-                    </div>
-                    <div class="menu-button">
-                        CSM 350
-                    </div>
+                    
                 </div>
                 <div class="folder-3">
                     <h1>Course</h1>
@@ -88,7 +79,7 @@
 
                 </div> 
                              
-            </div> -->
+            </div>
 
         </div>
         <img src="moon.png" title="darkmode" class="dark-toggle" id="icon" onclick="darkmode()">
@@ -99,7 +90,15 @@
        
 </body>
 <script>
-
+let tempV = JSON.parse(localStorage.getItem("TableView"));
+if(tempV === "v1"){
+    document.getElementById("prep-section").href="prep-cs4.html";
+    // document.getElementById("cs3Table").style.display="block";
+}else if (tempV === "v2"){
+    document.getElementById("prep-section").href="prep-cs3.html";
+}else {
+    document.getElementById("prep-section").href="Preperation.html";
+};
 </script>
 
 </html

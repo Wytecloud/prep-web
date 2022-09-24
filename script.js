@@ -101,7 +101,9 @@ let click = document.querySelector('.click');
     });
 }catch(err){}
 
-//load timetables
+//load timetables + prep page based on selection
+
+// document.getElementById("prep-section").href="Preperation.html";
 
 function loadCS4() {
 
@@ -110,6 +112,7 @@ function loadCS4() {
         document.getElementById("t1").style.display = "none";
         // document.getElementById("cs3Table").style.display="none";
         // document.getElementById("cs4Table").style.display="block";
+        document.getElementById("prep-section").href="prep-cs4.html";
 
         var view = "v1";
 
@@ -124,6 +127,8 @@ function loadCS3() {
     document.getElementById("cs4").style.display = "none";
     document.getElementById("cs3").style.display = "block";
     document.getElementById("t1").style.display = "none";
+    document.getElementById("prep-section").href="prep-cs3.html";
+
 
     var view = "v2";
 
@@ -131,9 +136,10 @@ function loadCS3() {
     JSON.stringify(view));
     }
 
-
     let stuff = localStorage.getItem('TableView');
     var checkLinks = document.getElementsByClassName('links curve')[0];
+
+
     // checkLinks.addEventListener('click', () => {
 
     // alert(stuff);
@@ -171,3 +177,13 @@ function loadCS3() {
 function tablePrint() {
     print();
 }
+
+// let tempV = JSON.parse(localStorage.getItem("TableView"));
+// if(tempV === "v1"){
+//     document.getElementById("prep-section").href="prep-cs4.html";
+//     // document.getElementById("cs3Table").style.display="block";
+// }else if (tempV === "v2"){
+//     document.getElementById("prep-section").href="prep-cs3.html";
+// }else {
+//     document.getElementById("prep-section").href="Preperation.html";
+// };

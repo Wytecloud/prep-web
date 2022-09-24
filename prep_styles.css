@@ -4,13 +4,19 @@
     scroll-behavior: smooth;
 }
 
+html,
+  body {
+    background: var(--about-color);
+      }
+
 body {
     margin: 0;
     padding: 0;
     /* background-image: var(--image-change); */
     background-image: none;
     /* background-color: var(--newtest-color); */
-    background-color: var(--about-color);
+    /* background-color: var(--about-color); */
+    /* background-color: var(--about-color); */
     background-size: cover;
     background-position: 40% 20%;
     background-repeat: no-repeat;
@@ -126,4 +132,12 @@ button a{
 
 .folder-vid-3::-webkit-scrollbar {
     display: none;
+}
+
+#t2 {
+    color: white;
+}
+
+#t2 a {
+    color: yellow;
 }
