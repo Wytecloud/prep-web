@@ -103,7 +103,8 @@ td:nth-child(3) {
                     <tbody>
                             <tr>
                                 <td >CSM 354 Computer Graphics</td>
-                                <td>Friday, 2022/09/09 3:30 pm</td>
+                                <!-- <td>Friday, 2022/09/09 3:30 pm</td> -->
+                                <td>Friday, 2022/09/24 12:59 pm</td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -196,12 +197,12 @@ if(tempV === "v1"){
             //If the count down is finished, write some text 
             if (distance < 0) {
                 clearInterval(x);
-                countDown.innerHTML = "Paper has started";
+                countDown.innerHTML = "Paper Completed";
             }
         }
     }, 1000);
-
-    var x = setInterval(
+    
+    var y = setInterval(
     function () {
 
         for (var i = 1, row; row = table2.rows[i]; i++) {
@@ -226,6 +227,7 @@ if(tempV === "v1"){
 
 
             // Display the result in the element
+
             countDown.innerHTML = (days + "d " + hours + "h "
                 + minutes + "m " + seconds + "s ");
                 
@@ -233,13 +235,17 @@ if(tempV === "v1"){
                 // + minutes + "m " + seconds + "s "); });
 
             //If the count down is finished, write some text 
+
+
             if (distance < 0) {
-                clearInterval(x);
-                countDown.innerHTML = "Paper has started";
+                clearInterval(y);
+                countDown.innerHTML = "Paper Completed";
+            } else if(distance > 7200000) {
+                    clearInterval(y);
+                    countDown.innerHTML = "Paper starts in two hours";
             }
         }
     }, 1000);
-    
 
 </script>
 
