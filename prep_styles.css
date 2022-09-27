@@ -171,7 +171,8 @@ button a{
   @media (max-width: 650px) {
 
     .prep-3{
-        gap: 10px;
+        height: 100vh;
+        height: fit-content;
     }
     .menu-3 {
         height: 150px;
@@ -180,14 +181,16 @@ button a{
 
     .folder-3 {
         /* flex-wrap: wrap; */
+        height: 300px;
         background: lightseagreen;
         width: 100%;
 
     }
 
     .folder-vid-3 {
+        margin: 20px;
         width: 90%;
-        height: 200px;
+        height: 150px;
         background-color: red;
     }
     
