@@ -99,17 +99,14 @@ box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
     color: aqua;
 }
 
-@media (max-width: 650px) {
-
-    .menu-3 {
-    flex-wrap: wrap;
-    }
-
+.menu-holder {
+    width: 98%;
 }
+
 
 .folder-3{
     /* background-color: greenyellow; */
-    background-color: rgba(255, 255, 255, 0.13);
+    /* background-color: rgba(255, 255, 255, 0.13); */
     width: fit-content;
     margin: 10px;
     width: 25%;
@@ -161,10 +158,27 @@ button a{
     display: none;
 }
 
-#t2 {
-    color: white;
-}
+@media (max-width: 1104px) {
+    .menu-3 {
+        /* padding-left: 15%; */
+        justify-content: flex-start;
+        width: 100%;
+        overflow-y: hidden;
+    }
 
-#t2 a {
-    color: yellow;
+  }
+
+  @media (max-width: 650px) {
+
+    .menu-3 {
+    display: flex;
+    }
+
+    .folder-3 {
+        /* flex-wrap: wrap; */
+        background: lightseagreen;
+        width: 100%;
+
+    }
+
 }
