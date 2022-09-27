@@ -31,12 +31,13 @@ function darkness() {
         console.log("Dark mode");
         theme = "DARK";
 
-        // icon.src = "sun.png";
-        // icon.title = "lightmode";
+        icon.src = "sun.png";
+        icon.title = "lightmode";
     }else{
         console.log("Light mode");
         theme = "LIGHT";
-        // icon.title = "darkmode";
+        icon.title = "darkmode";
+        icon.src = "moon.png";
     }
     
     //saving to localStorage(converting it to JSON)
@@ -63,9 +64,13 @@ function darkness() {
         if(GetTheme === "DARK"){
             document.body.classList = "dark-theme";
             icon.src = "sun.png";
+            icon.title = "lightmode";
+
         }else{
             document.body.classList = "";
             icon.src = "moon.png";
+            icon.title = "darkmode";
+
         }
 
 // var icon =document.getElementById("icon");
