@@ -156,71 +156,6 @@ tbody {
   border-bottom: 20px solid #01579b;
 }
 
-@media (max-width: 900px) {
-  table {
-    font-size: 1.1em;
-    width: 90%;
-    margin-left: 50px;
-    margin-top: 50px;
-  }
-}
-
-@media (max-width: 650px) {
-
-  .content {
-      flex-direction: column;
-      justify-content: flex-start;
-      margin-top: 70px;
-  }
-
-    .content-2 {
-    height: 100vh;
-  }
-
-  table thead{
-    display: none;
-  }
-
-  table, table tbody, table tr, table td{
-    display: block;
-    font-size: 1.1rem;
-  }
-
-  .tables {
-    height: 100%;
-  }
-
-  table {
-    height: 70vh;
-    overflow-y: scroll;
-  }
-
-  table tr{
-    margin-bottom: 15px;
-  }
-
-  table td{
-    text-align: right;
-    margin-left: 10px;
-    padding-left: 40%;
-    text-align: right;
-    position: relative;
-  }
-
-  table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 10%;
-    padding-left: 0px;
-    font-size: 15px;
-  }
-  
-  .welcome {
-    width: 95vw;
-  }
-
-}
 
 .calendar::before {
   content:  '';
@@ -318,4 +253,78 @@ margin: 10px;
 
 .temperror a {
   color: yellow;
+}
+
+
+
+@media (max-width: 900px) {
+  table {
+    font-size: 1.1em;
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .content {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 70px;
+      /* display: none; */
+  }
+
+    .content-2 {
+    height: 100vh;
+  }
+
+  table thead{
+    display: none;
+  }
+
+  table, table tbody, table tr, table td{
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .tables {
+    /* height: 100%; */
+  }
+
+  table {
+    margin-left: 25px;
+    height: 50vh;
+    overflow-y: scroll;
+  }
+
+  table::-webkit-scrollbar {
+    display: none;
+  }
+
+  table tr{
+    margin-bottom: 15px;
+  }
+
+  table td{
+    text-align: right;
+    margin-left: 10px;
+    padding-left: 40%;
+    text-align: right;
+    position: relative;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 10%;
+    padding-left: 0px;
+    font-size: 15px;
+  }
+  
+  .welcome {
+    width: 95vw;
+  }
+
 }
