@@ -30,7 +30,7 @@ table {
     color: #dddddd;
     text-align: center;
     font-family: sans-serif;
-    font-size: 1.6em;
+    font-size:clump(1.2em,10vw +1em,1.8em);
     outline: 0;
     font-weight: bold;
   }

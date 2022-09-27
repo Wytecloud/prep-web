@@ -121,6 +121,7 @@
   /* margin: 0; */
   line-height: 30px;
   font-weight: 600;
+  margin: 0.5px;
 }
 
 /* table styles */
@@ -325,6 +326,7 @@ margin: 10px;
   
   .welcome {
     width: 95vw;
+    font-size: 0.8em;
   }
 
 }
