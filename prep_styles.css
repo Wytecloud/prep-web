@@ -170,7 +170,11 @@ button a{
 
   @media (max-width: 650px) {
 
+    .prep-3{
+        gap: 10px;
+    }
     .menu-3 {
+        height: 150px;
     display: flex;
     }
 
@@ -179,6 +183,16 @@ button a{
         background: lightseagreen;
         width: 100%;
 
+    }
+
+    .folder-vid-3 {
+        width: 90%;
+        height: 250px;
+        background-color: red;
+    }
+    
+    .prep-holder {
+        height: 100vh;
     }
 
 }
