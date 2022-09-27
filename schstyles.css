@@ -89,13 +89,13 @@ th:nth-of-type(2) {
    } */
   
 
-   #cs3Table, #cs4Table {
-    overflow-y: auto;
-    height: 70vh;
-   }
-
    #cs3Table thead th, #cs4Table thead th{
     position: sticky;
     top: 0;
    }
+   #cs3Table, #cs4Table {
+    overflow-y: auto;
+    height: 70vh;
+   }
+   
 }
