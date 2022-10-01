@@ -40,6 +40,9 @@ body::-webkit-scrollbar {
 
     --text-color:#181818;
     --brand-color:white;
+
+    --homeprep3-color: rgba(255, 255, 255, 0.13);
+    --textprep3-color:black;
     
     /* about page background */
     /* --about-color:#b6b4b4; */
@@ -60,6 +63,11 @@ body::-webkit-scrollbar {
 
     --text-color:white;
     --brand-color:#28acff;
+
+    --homeprep3-color: #161623;
+    --textprep3-color:rgb(232, 232, 232);
+
+
 
     /* about page background */
     --about-color:#161623;

@@ -235,6 +235,7 @@ button a{
 
     
     .prep-3{
+        background-color: var(--homeprep3-color);
         height: 80vh;
         width: 100%;
         /* justify-content: space-around; */
@@ -253,7 +254,7 @@ button a{
     }
 
     .folder-3 {
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
         flex-direction: row;
         margin-top: 0;
         margin-bottom: 0;
@@ -273,7 +274,7 @@ button a{
         margin-top: 0;
         margin-bottom: 0s;
         width: 96%;
-        height: 21rem;
+        height: 50%;
         /* background-color: red; */
     }
 
@@ -290,8 +291,13 @@ button a{
     }
     
     .folder-3 button{
-        width: 50%;
+        width: 48%;
     }
     
 
+}
+
+.folder-vid-3 h2, 
+.folder-vid-3 p {
+    color: var(--textprep3-color);
 }
