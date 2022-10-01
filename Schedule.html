@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="schstyles.css">
-    <link rel="icon" href="Klogo.PNG">
+    <link rel="icon" href="images/brandlogo.png">
     <!-- <link rel="stylesheet" href="home_styles.css"> -->
     <script src="script.js" defer></script>
     
@@ -56,6 +56,8 @@ td:nth-child(3) {
         <div class="holder">
             <h1 class="temperror_2" id="t2">Oops!! You forgot to pick your course, please proceed<br> to the <a href="index.html">homepage</a> and select your course</h1>
             <!-- <div class="alarmholder"> -->
+    <button class="test">CLICK</button>
+
                 <table id="cs4Table">
                     <thead>
                         <tr>
@@ -97,13 +99,12 @@ td:nth-child(3) {
                     <tbody>
                             <tr>
                                 <td >CSM 354 Computer Graphics</td>
-                                <!-- <td>Friday, 2022/09/09 3:30 pm</td> -->
-                                <td>Friday, 2022/09/24 12:59 pm</td>
+                                <td>Friday, 2022/10/1 7:51:15 pm</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td >CSM 374 Real-time and Embedded systems</td>
-                                <td >Tuesday, 2022/09/13 3:30 pm</td>
+                                <td >Tuesday, 2022/10/2 3:30 pm</td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -148,8 +149,15 @@ td:nth-child(3) {
             <!-- </div> -->
         </div>
 
-        <img src="moon.png" title="darkmode" class="dark-toggle" id="icon">
 
+        <img src="images/moon.png" title="darkmode" class="dark-toggle" id="icon">
+        <img src="images/bell.png" title="Notification" class="notifybtn" id="icon">
+        <!-- <ion-icon name="notifications" class="notifybtn"></ion-icon> -->
+        <!-- <ion-icon name="notifications-outline" class="notifybtn"></ion-icon> -->
+        <!-- <ion-icon name="notifications"></ion-icon> -->
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 <script>
 
@@ -244,16 +252,42 @@ if(tempV === "v1"){
 
             //If the count down is finished, write some text 
 
+            var twoHours =7200000;
 
             if (distance < 0) {
-                clearInterval(y);
+                // clearInterval(y);
                 countDown.innerHTML = "Paper Completed";
-            } else if(distance > 7200000) {
-                    clearInterval(y);
-                    countDown.innerHTML = "Paper starts in two hours";
-            }
+        // new Notification ("sdvsdfsd")
+
+            } if(distance == twoHours) {
+                    // clearInterval(y);
+                    // countDown.innerHTML = "Paper starts in two hours";
+                    // alert("Your Exam starts in 2 hours")
+        new Notification ("Exam in awhile")
+        clearInterval(y);
+
+
+            } else if(distance == 0) {
+                clearInterval(y)
+                // alert("Your Exam Starts in 2 hours")
+        // new Notification ("Paper Started")
+
+            } 
         }
     }, 1000);
+    
+
+
+const button = document.querySelector(".notifybtn")
+
+button.addEventListener("click", () => {
+Notification.requestPermission().then(perm => {
+    if (perm === "granted") {
+        new Notification ("Example notification")
+    }
+})
+})
+
 
 </script>
 

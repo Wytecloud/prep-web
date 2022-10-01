@@ -153,6 +153,10 @@ button a{
     border-radius: 8px;
     /* sc */
     /* gap: 200px;    */
+}
+
+.folder-vid-3 p {
+    padding: 10px;
 }   
 
 .folder-vid-3 video {
@@ -170,6 +174,60 @@ button a{
         width: 100%;
         overflow-y: hidden;
     }
+    .prep-3{
+        display: inline;
+        height: 85vh;
+        width: 100%;
+        /* justify-content: space-around; */
+        /* height: fit-content; */
+    }
+    .menu-holder{
+        width: 98%;
+    }
+    /* .menu-3 {
+        height: 150px;
+        margin-bottom: 0;
+    display: flex;
+    } */
+    .folder-3 {
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 10px;
+        /* height: 250px; */
+        height: fit-content;
+        width: 98%;
+
+    }
+
+    .folder-vid-3 {
+        border-radius: 8px;
+        margin: 10px;
+        margin-top: 10px;
+        margin-bottom: 0s;
+        width: 98%;
+        /* height: 160px; */
+        height: 63%;
+        /* background-color: red; */
+    }
+
+    .folder-vid-3 h2 {
+        margin: 4px;
+    }
+    
+    .folder-vid-3 p {
+        margin: 0 2px;
+    }
+    .folder-3 h1 {
+        /* font-size: 20px; */
+        margin: 2px;
+    }
+    
+    .folder-3 button{
+        width: 50%;
+    }
 
   }
 
@@ -184,32 +242,38 @@ button a{
     }
 
     .menu-holder{
-        width: 98%;
+        width: 100%;
     }
     .menu-3 {
+        width: 96%;
         height: 150px;
         margin-bottom: 0;
-    display: flex;
+        display: flex;
+        border-radius: 8px 8px 0 0;
     }
 
     .folder-3 {
         /* flex-wrap: wrap; */
+        flex-direction: row;
         margin-top: 0;
         margin-bottom: 0;
         padding: 10px;
-        height: 250px;
+        /* height: 250px; */
         /* background: lightseagreen; */
-        width: 100%;
+        width: 96%;
+        border-radius: 0;
 
     }
-
+    .folder-3 h1 {
+        display: none;
+    }
     .folder-vid-3 {
-        border-radius: 8px;
-        margin: 8px;
+        border-radius: 0 0 8px 8px;
+        /* margin: 8px; */
         margin-top: 0;
         margin-bottom: 0s;
-        width: 100%;
-        height: 160px;
+        width: 96%;
+        height: 21rem;
         /* background-color: red; */
     }
 

@@ -19,7 +19,7 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-image: url(bgshape.png); */
+    /* background-image: url(images/bgshape.png); */
     background-image: var(--image-change);
     background-color: var(--newtest-color);
     background-size: cover;
@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 /* darkmode color vraiables */
 
 :root {
-    --image-change: url(bgshape.png);
+    --image-change: url(images/bgshape.png);
     --primary-color: white;
     --secondary-color: #333;
     --newtest-color: #329;
@@ -52,7 +52,7 @@ body::-webkit-scrollbar {
 .dark-theme{
     /* transition: 1s all; */
     --image-change: url("");
-    /* --image-change: url(image.png); */
+    /* --image-change: url(images/image.png); */
     /* --primary-color: #333; */
     --primary-color: #161623;
     --secondary-color: white;
@@ -191,8 +191,8 @@ color: blue;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    bottom: .2rem;
-    left: .2rem;
+    bottom: .3rem;
+    left: .3rem;
 }
 
 .dark-toggle:hover {

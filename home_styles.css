@@ -256,6 +256,12 @@ margin: 10px;
   color: yellow;
 }
 
+#downloadTable {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 1.5rem;
+}
+
 
 
 @media (max-width: 900px) {
@@ -289,9 +295,9 @@ margin: 10px;
     font-size: 1.1rem;
   }
 
-  .tables {
-    /* height: 100%; */
-  }
+  /* .tables {
+    height: 100%;
+  } */
 
   table {
     margin-left: 25px;

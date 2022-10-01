@@ -31,13 +31,13 @@ function darkness() {
         console.log("Dark mode");
         theme = "DARK";
 
-        icon.src = "sun.png";
+        icon.src = "images/sun.png";
         icon.title = "lightmode";
     }else{
         console.log("Light mode");
         theme = "LIGHT";
         icon.title = "darkmode";
-        icon.src = "moon.png";
+        icon.src = "images/moon.png";
     }
     
     //saving to localStorage(converting it to JSON)
@@ -51,10 +51,10 @@ function darkness() {
 //     console.log(GetTheme);
 //     if(GetTheme === "DARK"){
 //         document.body.classList = "dark-theme";
-//         icon.src = "sun.png";
+//         icon.src = "images/sun.png";
 //     }else{
 //         document.body.classList = "";
-//         icon.src = "moon.png";
+//         icon.src = "images/moon.png";
 //     }
 //     },);
 
@@ -63,12 +63,12 @@ function darkness() {
         console.log(GetTheme);
         if(GetTheme === "DARK"){
             document.body.classList = "dark-theme";
-            icon.src = "sun.png";
+            icon.src = "images/sun.png";
             icon.title = "lightmode";
 
         }else{
             document.body.classList = "";
-            icon.src = "moon.png";
+            icon.src = "images/moon.png";
             icon.title = "darkmode";
 
         }
@@ -78,10 +78,10 @@ function darkness() {
 // icon.onclick = function() {
 //     document.body.classList.toggle("dark-theme");
 //     // if(document.body.classList.contains("dark-theme")){
-//     //     icon.src = "sun.png";
+//     //     icon.src = "images/sun.png";
 //     //     icon.title= "lightmode";
 //     // }else{
-//     //     icon.src = "moon.png";
+//     //     icon.src = "images/moon.png";
 //     //     icon.title= "darkmode";
 //     // }
 // }
@@ -109,7 +109,7 @@ let click = document.querySelector('.click');
 
 function loadCS4() {
 
-        document.getElementById("cs3").style.display = "none";
+        // document.getElementById("cs3").style.display = "none";
         document.getElementById("cs4").style.display = "block";
         document.getElementById("t1").style.display = "none";
         // document.getElementById("cs3Table").style.display="none";
@@ -126,10 +126,12 @@ function loadCS4() {
     
 function loadCS3() {
 
-    document.getElementById("cs4").style.display = "none";
-    document.getElementById("cs3").style.display = "block";
+    // document.getElementById("cs4").style.display = "none";
+    // document.getElementById("cs3").style.display = "block";
+    document.getElementById("cs4").style.display = "block";
     document.getElementById("t1").style.display = "none";
     document.getElementById("prep-section").href="prep-cs3.html";
+    
 
 
     var view = "v2";

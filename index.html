@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="home_styles.css">
     <script src="script.js" defer ></script>
-    <link rel="icon" href="Klogo.PNG">
+    <link rel="icon" href="images/brandlogo.png">
     <!-- <script src="test.js" defer ></script> -->
     <!-- <script src="jquery.js"></script>
 
@@ -137,14 +137,14 @@
             </div>
             
         </div>
-        <img src="moon.png" title="darkmode" class="dark-toggle" id="icon" onclick="darkmode()">
+        <img src="images/moon.png" title="darkmode" class="dark-toggle" id="icon" onclick="darkmode()">
         <div class="content-2" id="move">
 
             <div class="tables">
 
 <!-- CS4 timetable -->
             <div class="printzone" id="content">
-                <div class="timetable a" id="cs4">
+                <!-- <div class="timetable a" id="cs4">
                     <table>
                     <thead>
                         <th>Date</th>
@@ -187,11 +187,73 @@
                     </tbody>
                 </table>
 
+                </div> -->
+
+                <div class="timetable a" id="cs4">
+                    <table>
+                    <thead>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Course</th>
+                        <th>Venue</th>
+                        <th>test</th>
+                    </thead>
+                    <tbody id="tbody1"></tbody>
+                    <tr>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                    </tr>
+                    <!-- <td>hi</td>
+                    <td>hi</td>
+                    <td>hi</td>
+                    <td>hi</td> -->
+                        <!-- <tr>
+                            <td data-label="Date">Tuesday 24th May 2022</td>
+                            <td data-label="Time">12.00pm-2.00pm</td>
+                            <td data-label="Course">CSM 481 Information Systems I</td>
+                            <td data-label="Venue">SF1/SF19/SF20</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Thursday 26th May 2022</td>
+                            <td data-label="Time">3.30pm-5.30pm</td>
+                            <td data-label="Course">CSM 481 Operating System</td>
+                            <td data-label="Venue">FF1/FF5/FF24</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Monday 30th May 2022</td>
+                            <td data-label="Time">3.30pm-5.30pm</td>
+                            <td data-label="Course">CSM 491 Graph Theory & its Application	</td>
+                            <td data-label="Venue">FF1/FF5/FF24</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Tuesday 31st May 2022</td>
+                            <td data-label="Time">3.30pm-5.30pm</td>
+                            <td data-label="Course">CSM 477 Data Communications</td>
+                            <td data-label="Venue">SF1/SF7/SF8</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Date">Wednesday 1st June 2022</td>
+                            <td data-label="Time">3.30pm-5.30pm</td>
+                            <td data-label="Course">CSM 495 Introduction to Software Engineering</td>
+                            <td data-label="Venue">SF1/SF7/SF8</td>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+
                 </div>
 
 <!-- CS3 timetable -->
 
-                <div class="timetable b" id="cs3">
+                <!-- <div class="timetable b" id="cs3">
                     <table>
                         <thead>
                             <th>Date</th>
@@ -246,12 +308,15 @@
                         </tbody>
                     </table>
 
-                </div>
+                </div> -->
+
+
             </div>
                 <div class="print">
                     <h1 class="temperror" id="t1">Oops!! You forgot to pick your course,<br> please <a href="#hometoppage">scroll up</a> and select your course</h1>
-                    <button class="printout" onclick="tablePrint()">
-                        Click to download
+                    <button class="printout" type="button">
+                        <a href="#" download="Exam Timetable" id="downloadTable">
+                            Download <ion-icon name="download-outline"></ion-icon></a>
                     </button>
                 </div>
 
@@ -284,6 +349,166 @@
             const analytics = getAnalytics(app);
             import {getDatabase, set, get, update, remove, ref, child} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"
           </script> -->
+          <script type="module">
+
+            var stdNo = 0;
+            var tbody = document.getElementById("tbody1");
+        
+            function AddItemToTable(date,time,course,venue,test){
+                let trow = document.createElement("tr");
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
+                let td3 = document.createElement('td');
+                let td4 = document.createElement('td');
+                let td5 = document.createElement('td');
+                let td6 = document.createElement('td');
+                // let td6 = document.createElement('td');
+        
+        
+                td1.innerHTML = ++stdNo;
+                td2.innerHTML = date;
+                td3.innerHTML = time;
+                td4.innerHTML = course;
+                td5.innerHTML = venue;
+        
+                // trow.appendChild(td1);
+                trow.appendChild(td2);
+                trow.appendChild(td3);
+                trow.appendChild(td4);
+                trow.appendChild(td5);
+                trow.appendChild(td6);
+
+        
+                tbody.appendChild(trow);
+            }
+            function AddAllItemsToTable(TheStudent){
+                stdNo=0;
+                tbody.innerHTML="";
+                TheStudent.forEach(element => {
+                    AddItemToTable( element.Date, element.Time, element.Course, element.Venue);
+        
+                });
+            }
+        
+         // Import the functions you need from the SDKs you need
+         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+          import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+          // TODO: Add SDKs for Firebase products that you want to use
+          // https://firebase.google.com/docs/web/setup#available-libraries
+        
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          const firebaseConfig = {
+            apiKey: "AIzaSyAAYhSTzkRjZsW7I2D9czB0foXMiKpfe9c",
+            authDomain: "prep-database.firebaseapp.com",
+            databaseURL: "https://prep-database-default-rtdb.firebaseio.com",
+            projectId: "prep-database",
+            storageBucket: "prep-database.appspot.com",
+            messagingSenderId: "39036315929",
+            appId: "1:39036315929:web:46e63775fc6a72d9513d88",
+            measurementId: "G-FNLK5Z0QP8"
+          };
+        
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+        
+            import { getDatabase, ref, child, onValue, get, update} 
+            from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"
+        
+            const db = getDatabase();
+        
+            //get all data once
+        
+            // function GetAllDataOnce(){
+            //     const dbRef = ref(db);
+        
+            //     get(child(dbRef, "CS4"))
+            //     .then((snapshot)=>{
+        
+            //         var batch =[];
+        
+            //         snapshot.forEach(childSnapshot => {
+            //             batch.push(childSnapshot.val());
+            //         }); 
+        
+            //         AddAllItemsToTable(batch);
+            //     });
+            // }
+        
+            let selectCS3 = document.querySelector(".links"); 
+            let selectCS4 = document.querySelector(".links.curve"); 
+
+            function GetAllDataRealTime(){
+
+                const dbRef = ref(db,"CS4");
+
+                onValue(dbRef,(snapshot)=>{
+        
+                    var batch =[];
+        
+                    snapshot.forEach(childSnapshot => {
+                        batch.push(childSnapshot.val());
+                });
+                
+                AddAllItemsToTable(batch);
+                })
+           }
+
+           function GetAllDataRealTime_3(){
+
+                const dbRef = ref(db,"CS3");
+
+                onValue(dbRef,(snapshot)=>{
+
+                    var batch =[];
+
+                    snapshot.forEach(childSnapshot => {
+                        batch.push(childSnapshot.val());
+            });
+
+            AddAllItemsToTable(batch);
+            })
+        }
+        
+            // window.onload = GetAllDataRealTime;
+            selectCS4.addEventListener("click", GetAllDataRealTime);
+            selectCS3.addEventListener("click", GetAllDataRealTime_3);
+            
+            let tempj = JSON.parse(localStorage.getItem("TableView"));
+if(tempj === "v1"){
+    document.getElementById("prep-section").href="prep-cs4.html";
+    // document.getElementById("cs3").style.display = "none";
+    document.getElementById("cs4").style.display = "block";
+    document.getElementById("t1").style.display = "none";
+            window.onload = GetAllDataRealTime;
+
+            document.getElementById("downloadTable").href="resources/Exam_Timetable_CS4.pdf";
+
+            
+    // document.getElementById("cs3Table").style.display="block";
+}else if (tempj === "v2"){
+    document.getElementById("prep-section").href="prep-cs3.html";
+    // document.getElementById("cs3").style.display = "block";
+    document.getElementById("cs4").style.display = "block";
+    document.getElementById("t1").style.display = "none";
+    window.onload = GetAllDataRealTime_3;
+
+    document.getElementById("downloadTable").href="resources/Exam_Timetable_CS3.pdf";
+
+
+    
+}else {
+    document.getElementById("prep-section").href="Preperation.html";
+};
+
+
+
+        </script>
+
+        <!-- icon pack -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 <script>
@@ -291,16 +516,26 @@
 let tempC = JSON.parse(localStorage.getItem("TableView"));
 if(tempC === "v1"){
     document.getElementById("prep-section").href="prep-cs4.html";
-    document.getElementById("cs3").style.display = "none";
+    // document.getElementById("cs3").style.display = "none";
     document.getElementById("cs4").style.display = "block";
     document.getElementById("t1").style.display = "none";
+            window.onload = GetAllDataRealTime;
+
+    document.getElementById("downloadTable").href="resources/Exam_Timetable_CS4.pdf";
+
+
         
     // document.getElementById("cs3Table").style.display="block";
 }else if (tempC === "v2"){
     document.getElementById("prep-section").href="prep-cs3.html";
-    document.getElementById("cs3").style.display = "block";
-    document.getElementById("cs4").style.display = "none";
+    // document.getElementById("cs3").style.display = "block";
+    document.getElementById("cs4").style.display = "block";
     document.getElementById("t1").style.display = "none";
+    window.onload = GetAllDataRealTime_3;
+
+    document.getElementById("downloadTable").href="resources/Exam_Timetable_CS3.pdf";
+
+
     
 }else {
     document.getElementById("prep-section").href="Preperation.html";
