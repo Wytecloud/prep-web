@@ -15,7 +15,10 @@
 }
 
 .calendar {
-  margin: 0;
+  padding: 13px;
+  /* background-color: rgba(255, 253, 253, 0.1); */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter:blur(20px);
 }
 
 .selection {
